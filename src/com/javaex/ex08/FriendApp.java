@@ -8,18 +8,33 @@ public class FriendApp {
 
 		Scanner sc = new Scanner(System.in);
 
-		System.out.println("친구를 3명 등록해 주세요");
-		String friend1 = sc.nextLine();
-		String friend2 = sc.nextLine();
-		String friend3 = sc.nextLine();
-
-		String sArray1[] = friend1.split(" ");
-		String sArray2[] = friend2.split(" ");
-		String sArray3[] = friend3.split(" ");
-
-		System.out.println("이름:" + sArray1[0] + " 핸드폰:" + sArray1[1] + " 학교:" + sArray1[2]);
-		System.out.println("이름:" + sArray2[0] + " 핸드폰:" + sArray2[1] + " 학교:" + sArray2[2]);
-		System.out.println("이름:" + sArray3[0] + " 핸드폰:" + sArray3[1] + " 학교:" + sArray3[2]);
+		boolean action = true;
+		
+		while(action) {
+			System.out.println("친구를 3명 등록해 주세요");
+			String friend1 = sc.nextLine();
+			String friend2 = sc.nextLine();
+			String friend3 = sc.nextLine();
+			
+			try {
+				
+				Friend f01 = new Friend(friend1);
+				Friend f02 = new Friend(friend2);
+				Friend f03 = new Friend(friend3);
+				action = false;
+				
+			} catch (ArrayIndexOutOfBoundsException e) {
+				System.out.println("잘못 입력하셨습니다. 다시 입력해주세요.");
+			}
+		}
+			
+			
+		
+		
+		
+		
+		
+		
 
 		sc.close();
 

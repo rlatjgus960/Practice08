@@ -9,8 +9,9 @@ public class Friend {
 	}
 
 	public Friend(String friend) {
-		super();
-		this.friend = friend;
+		
+		String sArray[] = friend.split(" ");
+		System.out.println("이름:" + sArray[0] + " 핸드폰:" + sArray[1] + " 학교:" + sArray[2] );
 
 	}
 
@@ -22,8 +23,4 @@ public class Friend {
 		this.friend = friend;
 	}
 
-	public void showInfo() {
-		// System.out.println("이름:" + + " 핸드폰:" + + " 학교:" + );
-
-	}
 }
