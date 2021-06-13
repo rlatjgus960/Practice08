@@ -27,22 +27,22 @@ public class CalcApp {
 					if (sArray[1].equals("+")) {
 						Add a01 = new Add();
 						a01.setValue(a, b);
-						System.out.println(a01.calculate());
+						System.out.println(">> "+a01.calculate());
 
 					} else if (sArray[1].equals("-")) {
 						Sub s01 = new Sub();
 						s01.setValue(a, b);
-						System.out.println(s01.calculate());
+						System.out.println(">> "+s01.calculate());
 
 					} else if (sArray[1].equals("/")) {
 						Div d01 = new Div();
 						d01.setValue(a, b);
-						System.out.println(d01.calculate());
+						System.out.println(">> "+d01.calculate());
 
 					} else if (sArray[1].equals("*")) {
 						Mul m01 = new Mul();
 						m01.setValue(a, b);
-						System.out.println(m01.calculate());
+						System.out.println(">> "+m01.calculate());
 
 					} else {
 						System.out.println("알 수 없는 연산입니다.");
